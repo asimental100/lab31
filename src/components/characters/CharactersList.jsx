@@ -5,18 +5,20 @@ import { Character } from './Character';
 import { useCharacters } from '../../hooks/character';
 
 export const CharacterList = ({ page }) => {
-  const { loading, characaters } = useCharacters(page);
+  const { loading, characters } = useCharacters(page);
   if(loading) return <h1>Loading...</h1>;
 
-  const charactersElements = characaters.map(character => {
-    <Link to={`/character/${character.name}`}>
+  const characterElements = characters.map(character => (
+    <Link to={`/character/${character.name}`} key={character.name}>
       <Character {...character} />
-    </Link>;
-  });
+    </Link>
+  ));
+
+  console.log(characterElements);
 
   return (
     <ul>
-      {charactersElements}
+      {characterElements}
     </ul>
   );
 };

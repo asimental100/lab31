@@ -8,8 +8,8 @@ export default function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/" component={CharactersPage}/>
-        <Route exact path="/character/:name" component={DetailedCharacterPage}/>
+        <Route exact path="/" component={CharactersPage} />
+        <Route exact path="/character/:name" component={DetailedCharacterPage} />
       </Switch>
     </Router>
   );

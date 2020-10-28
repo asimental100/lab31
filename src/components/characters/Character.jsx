@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Character = ({ name, status, image }) => {
-  <li>
+export const Character = ({ name, status, image }) => (
+  <li key={name}>
     <h1>{name}</h1>
-    <img src={image} alt={name} />
+    <img src={image} alt={name}></img>
     <p>{status}</p>
-  </li>;
-};
+  </li>
+);
 
 Character.propTypes = {
   name: PropTypes.string.isRequired,

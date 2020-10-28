@@ -5,21 +5,21 @@ import { useDetailedCharacter } from '../../hooks/character';
 
 export const DetailedCharacter = () => {
   const { name } = useParams();
-  const { loading, character } = useDetailedCharacter(name);
+  const { loading, detailedCharacter } = useDetailedCharacter(name);
   if(loading) return <h1>Loading...</h1>;
 
   return (
-    <>
-      <h1>{character.name}</h1>
-      <p>Status: {character.status}</p>
-      <image src={character.image} alt={character.name} />
-      <p>Gender: {character.gender}</p>
-      <p>Born: {character.born}</p>
-      <p>Occupation: {character.occupation}</p>
-      <p>Rank: {character.rank}</p>
-      <p>Affiliations: {character.affiliations}</p>
-      <p>Portrayed By: {character.portrayedby}</p>
-      <p>Description: {character.description}</p>
-    </>
+    <li>
+      <h1>{detailedCharacter.name}</h1>
+      <p>Status: {detailedCharacter.status}</p>
+      <img src={detailedCharacter.image} alt={detailedCharacter.name} />
+      <p>Gender: {detailedCharacter.gender}</p>
+      <p>Born: {detailedCharacter.born}</p>
+      <p>Occupation: {detailedCharacter.occupation}</p>
+      <p>Rank: {detailedCharacter.rank}</p>
+      <p>Affiliations: {detailedCharacter.affiliations}</p>
+      <p>Portrayed By: {detailedCharacter.portrayedby}</p>
+      <p>Description: {detailedCharacter.description}</p>
+    </li>
   );
 };

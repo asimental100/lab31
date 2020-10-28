@@ -8,7 +8,7 @@ export const CharactersPage = () => {
   return (
     <>
       <button onClick={() => setPage(page => page - 1)} disabled={page <= 1}>Prev</button>
-      <button onClick={() => setPage(page => page + 1)} disabled={page <= 5}>Next</button>
+      <button onClick={() => setPage(page => page + 1)} disabled={page >= 10}>Next</button>
       <CharacterList page={page}/>
     </>
   );

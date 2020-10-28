@@ -3,7 +3,7 @@ import { fetchCharacterByName, fetchCharacters } from '../services/fetch';
 
 export const useDetailedCharacter = name => {
   const [loading, setLoading] = useState(true);
-  const [detailedCharacter, setDetailedCharacter] = useState(null);
+  const [detailedCharacter, setDetailedCharacter] = useState([]);
 
   useEffect(() => {
     fetchCharacterByName(name)
